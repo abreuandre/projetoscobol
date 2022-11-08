@@ -1,0 +1,13 @@
+22. PRATICA - CRIAÇÃO E COMPILAÇÃO DE UM PROGRAMA
+
+HERC01.LIBS.COBOL(PROG001) - 1.0.4
+
+
+IDENTIFICATION                     DIVISION.
+PROGRAM-ID. PROG001.
+ENVIRONMENT                        DIVISION.
+DATA                               DIVISION.
+WORKING-STORAGE                    SECTION.
+PROCEDURE                          DIVISION.
+    DISPLAY 'PRIMEIRO PROGRAMA'.
+    STOP RUN.
