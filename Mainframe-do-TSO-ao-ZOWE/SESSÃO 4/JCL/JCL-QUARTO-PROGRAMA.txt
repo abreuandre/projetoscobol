@@ -1,0 +1,34 @@
+
+COMPILA
+
+
+
+HERC01XX JOB (PROG003),
+             'EXECUTA PROG003',
+             CLASS=A,
+             MSGCLASS=H,
+             REGION=8M,TIME=1440,
+             MSGLEVEL=(1,1),
+             NOTIFY=HERC01
+COMPILA   EXEC COBOL,
+          PROG='PROG003',
+          BIBF='HERC01.LIBS.COBOL',
+          BIBC='HERC01.LIBS.LOAD'
+
+---------------------------------------------------------------------
+
+EXECOB
+
+HERC01XX JOB (PROG001),
+             'EXECUTA PROG003',
+             CLASS=A,
+             MSGCLASS=H,
+             REGION=8M,TIME=1440,
+             MSGLEVEL=(1,1),
+             NOTIFY=HERC01
+STEP01   EXEC PGM=PROG003
+STEPLIB  DD DSN=HERC01.LIBS.LOAD,DISP=SHR
+SYSOUT   DD SYSOUT=*
+SYSIN    DD *
+12
+04
