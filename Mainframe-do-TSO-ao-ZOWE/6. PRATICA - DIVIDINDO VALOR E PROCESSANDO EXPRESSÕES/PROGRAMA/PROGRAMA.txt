@@ -1,0 +1,43 @@
+28. PRATICA - DIVIDINDO VALOR E PROCESSANDO EXPRESSÕES
+
+IDENTIFICATION                  DIVISION.
+PROGRAM-ID. PROG003.
+ENVIRONMENT                     DIVISION.
+DATA                            DIVISION.
+WORKING-STORAGE                 SECTION.
+77  WRK-V1  PIC 9(02) VALUE ZEROS.
+77  WRK-V2  PIC 9(02) VALUE ZEROS.
+77  WRK-RES PIC 9(03) VALUE ZEROS.
+PROCEDURE                       DIVISION.
+    ACCEPT WRK-V1.
+    ACCEPT WRK-V2.
+*====================================================
+       MOVE 0 TO WRK-RES.
+       DIVIDE WRK-V1 BY WRK-V2 GIVING WRK-RES.
+          DISPLAY  'VALOR 1..... ' WRK-V1.
+          DISPLAY  'VALOR 2..... ' WRK-V2.
+          DISPLAY  'RESULTADO .. ' WRK-RES.
+       STOP RUN.
+
+
+
+CASO QUEIRA TIRAR MÉDIA:
+
+IDENTIFICATION                  DIVISION.
+PROGRAM-ID. PROG003.
+ENVIRONMENT                     DIVISION.
+DATA                            DIVISION.
+WORKING-STORAGE                 SECTION.
+77  WRK-V1  PIC 9(02) VALUE ZEROS.
+77  WRK-V2  PIC 9(02) VALUE ZEROS.
+77  WRK-RES PIC 9(03) VALUE ZEROS.
+PROCEDURE                       DIVISION.
+    ACCEPT WRK-V1.
+    ACCEPT WRK-V2.
+*====================================================
+       MOVE 0 TO WRK-RES.
+       COMPUTE WRK-RES = (WRK-V1 + WRK-V2) / 2.
+          DISPLAY  'VALOR 1..... ' WRK-V1.
+          DISPLAY  'VALOR 2..... ' WRK-V2.
+          DISPLAY  'RESULTADO .. ' WRK-RES.
+       STOP RUN.
