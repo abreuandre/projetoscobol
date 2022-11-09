@@ -1,0 +1,20 @@
+27. PRATICA - OPERADORES ARITMÉTICOS - MULTIPLICANDO VALOR - COMANDO MULTIPLY
+
+IDENTIFICATION                  DIVISION.
+PROGRAM-ID. PROG003.
+ENVIRONMENT                     DIVISION.
+DATA                            DIVISION.
+WORKING-STORAGE                 SECTION.
+77  WRK-V1  PIC 9(02) VALUE ZEROS.
+77  WRK-V2  PIC 9(02) VALUE ZEROS.
+77  WRK-RES PIC 9(03) VALUE ZEROS.
+PROCEDURE                       DIVISION.
+    ACCEPT WRK-V1.
+    ACCEPT WRK-V2.
+*====================================================
+       MOVE 0 TO WRK-RES.
+       MULTIPLY WRK-V1 BY WRK-V2 GIVING WRK-RES.
+          DISPLAY  'VALOR 1..... ' WRK-V1.
+          DISPLAY  'VALOR 2..... ' WRK-V2.
+          DISPLAY  'RESULTADO .. ' WRK-RES.
+       STOP RUN.
