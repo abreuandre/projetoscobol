@@ -1,0 +1,30 @@
+HERC01.LIBS.JCL(COMPILA) - 1.10
+
+//HERC01XX  JOB (PROG008),
+//              'EXECUTA PROG008',
+//              CLASS=A,
+//              MSGCLASS=H,
+//              REGION=8M,TIME=1440,
+//              MSGLEVEL=(1,1),
+//              NOTIFY=HERC01
+//COMPILA   EXEC COBOL,
+//          PROG='PROG008',
+//          BIBF='HERC01.LIBS.COBOL',
+//          BIBC='HERC01.LIBS.LOAD'
+
+
+HERC01.LIBS.JCL(EXEC08) - 1.06
+
+//HERC01XX  JOB (PROG008),
+//              'EXECUTA PROG008',
+//              CLASS=A,
+//              MSGCLASS=H,
+//              REGION=8M,TIME=1440,
+//              MSGLEVEL=(1,1),
+//              NOTIFY=HERC01
+//STEP01    EXEC PGM=PROG008
+//STEPLIB   DD DSN=HERC01.LIBS.LOAD,DISP=SHR
+//SYSOUT    DD SYSOUT=*
+//SYSIN     DD *
+0600
+0400
